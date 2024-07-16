@@ -1,7 +1,8 @@
 //U54529624
-// Toolbar.js
+// Toolbar.js 
 import React, { useState } from 'react';
 import RateMovieButton from './RateMovieButton';
+import './toolbar.css';
 
 const Toolbar = ({ movies }) => {
     const [selectedMovie, setSelectedMovie] = useState(movies[0]);
@@ -11,7 +12,7 @@ const Toolbar = ({ movies }) => {
     };
 
     return (
-        <div>
+        <div className="toolbar">
             <select onChange={handleMovieChange} value={selectedMovie}>
                 {movies.map((movie) => (
                     <option key={movie} value={movie}>
